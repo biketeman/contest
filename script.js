@@ -24,11 +24,23 @@ function getRandomWordList (){
     while(WordsList.length < 150){
         WordsList.push(words[getRandomWord()])
     }
-	for(i = 0; i <words.length; i++){
+	for(i = 0; i <WordsList.length; i++){
         $('.grille').append("<h4>" + ' ' + WordsList[i] + ' ' + '</h4>');
     }
 }
 getRandomWordList()
 
+
+//on récupère ce qui est typed par l'utilisateur
+$('.barre').on('keyup', function(e) {
+    let barre = $('.barre').val()
+
+    if(barre === WordsList[0] ){
+        console.log('yes')
+    }
+    else{
+        console.log('no')
+    }
+});
 
 console.log(WordsList)
