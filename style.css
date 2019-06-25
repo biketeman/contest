@@ -1,0 +1,10 @@
+body{
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-font-smoothing:antialiased; 
+    padding: 0;
+    margin: 0; 
+    background-color:#F7F7F7;
+}
