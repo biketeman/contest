@@ -11,4 +11,24 @@ let words = ['tissu', 'par', 'pars', 'faire', 'la', 'pose', 'terre', 'le', 'les'
 'récolte', 'diva', 'mécanicien', 'cuisinier', 'si', 'école', 'être', 'passion', 'fusion', 'dépréssion', 'gastronomique', 'chef', 'poignée', 'câble', 'message', 'bouteille', 'rouge',
 'jaune', 'roi', 'éléctricité', 'peur', 'lapin', 'serpent', 'loupe', 'cigarette', 'siffler']
 
-console.log(words.length)
+let WordsList = []
+let singleWord
+
+//récupère un nombre aléatoire
+function getRandomWord (){
+    return singleWord = Math.round(Math.random()* words.length)
+}
+
+//récupère une liste de mots aléatoires
+function getRandomWordList (){
+    while(WordsList.length < 150){
+        WordsList.push(words[getRandomWord()])
+    }
+	for(i = 0; i <words.length; i++){
+        $('.grille').append("<h4>" + ' ' + WordsList[i] + ' ' + '</h4>');
+    }
+}
+getRandomWordList()
+
+
+console.log(WordsList)
